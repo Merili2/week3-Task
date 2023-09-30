@@ -7,6 +7,7 @@
     box-sizing: border-box;
 }
 
+
 html {
     font-family: 'Roboto', sans-serif;
     color: #151515;
@@ -32,12 +33,14 @@ html {
     margin-top: 2rem;
     height: 85%;
     border-radius:  30px;
+    cursor: pointer;
 }
 
 .movie-poster-container img:hover{
     transform: scale(1.1);
     box-shadow: 8px 8px 8px -4px black;
 }
+
 
 .movie-rating {
     display: inline-block;
@@ -130,4 +133,41 @@ footer ul li a {
     text-transform: uppercase;
     text-decoration: none;
     color: #777;
+}
+.modal{
+   display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(93, 83, 83, 0.546);
+    z-index: 2;
+    top: 0 ;
+    left: 0;
+    text-align: center;
+  }
+
+  .modal-content{
+    background-color: antiquewhite;
+    margin: 5% auto;
+    padding: 5rem;
+    width: 600px;
+    height: 600px;
+    animation: zoom-in 1s;
+  }
+  @keyframes zoom-in {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+  }
+  .closeBtn{
+    float: right;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  .movie-poster-modal{
+    width: 300px;
+  }
+
+.movie-poster{
+    width: 300px;
+    cursor: pointer;
 }
